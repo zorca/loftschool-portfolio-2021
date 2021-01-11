@@ -1,5 +1,8 @@
 # Учебный шаблон проекта Portfolio
 
+## Билд на Github Pages
+[https://loftschool-portfolio-2021.zorca.dev/](https://loftschool-portfolio-2021.zorca.dev/)
+
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же 
 [последняя версия Yarn](https://yarnpkg.com/ru/docs/install)
 
@@ -20,11 +23,6 @@ $ yarn
 | storybook | Запустит сторибук для разработки компонентов |
 
 #### Чтобы запустить скрипт:
-```sh
-$ npm run имя_скрипта
-```
-
-##### Либо:
 ```sh
 $ yarn имя_скрипта
 ```
