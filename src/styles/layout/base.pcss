@@ -1,15 +1,14 @@
-html {
-  @include desktop {
-    font-size: 15px;
-  }
-  @include tablets {
-    font-size: 14px;
-  }
-}
-
 body,
 html {
   height: 100%;
+}
+
+html {
+  font-size: 14px;
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 body {
@@ -28,6 +27,11 @@ body {
 button {
   border: 0;
   cursor: pointer;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  background-color: transparent;
 }
 
 ul {
@@ -51,11 +55,6 @@ p {
   padding: 0;
 }
 
-button[type="button"] {
-  cursor: pointer;
-  background-color: transparent;
-}
-
 a {
   color: inherit;
   cursor: pointer;
@@ -65,12 +64,6 @@ img {
   display: block;
   max-width: 100%;
   max-height: 100%;
-}
-
-.wrapper {
-  overflow: hidden;
-  min-height: 100%;
-  position: relative;
 }
 
 .container {
@@ -92,6 +85,28 @@ img {
   @include desktopHd {
     max-width: $bp-desktop-hd;
   }
+}
+
+.container--welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.container--about {
+  max-width: $bp-desktop;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+.main-content {
+  background: url('~images/bg/bg-welcome.jpg') center 30% / 105% no-repeat;
 }
 
 .fullscreen-section {

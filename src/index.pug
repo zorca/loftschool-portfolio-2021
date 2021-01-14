@@ -9,9 +9,9 @@ html(lang="en")
     title Portfolio | main page
   body
     .wrapper
-      .maincontent
-        section.welcome.fullscreen-section
-          .container
+      .main-content
+        section.section-welcome.fullscreen-section
+          .container.container--welcome
             header.header
               .header__left
                 .span.logo-text ВШ
@@ -19,14 +19,51 @@ html(lang="en")
                 .header__menu
                   nav.menu
                     ul.menu__list
-                      - var menuLinks = ["Обо мне", "Навыки", "Работы", "Отзывы"];
+                      - var menuLinks = ['Обо мне', 'Навыки', 'Работы', 'Отзывы'];
                       each item in menuLinks
                         li.menu__item
                           a(href="#").menu__link #{item}
               .header__right
                 ul.social-icons
-                  - var socials = ['insta', 'vk', 'github', 'envelope'];
+                  - var socials = [{icon: 'insta', link: 'https://www.instagram.com/wpseed/'}, {icon: 'github', link: 'https://github.com/zorca'}, {icon: 'vk', link: 'https://vk.com/steelcat'}, {icon: 'envelope', link: 'mailto:vs@zorca.org'}];
                   each item in socials
                     li.social-icons__item
-                      a(href=`${item === 'envelope' ? 'mailto:vs@zorca.org' : '#'}`).social-icons__link
-                        +icon(item, 'social-icons__icon')
+                      a(href=`${item.link}`).social-icons__link
+                        +icon(item.icon, 'social-icons__icon')
+            .hero
+              .hero__subtitle Личный сайт веб-разработчика
+              .hero_title Виталий Шутов
+            .welcome__down
+              a(href="").btn-scroll-down Скролл
+               +icon('scroll-alt', 'btn-scroll-down__icon')
+        section.section-about
+          .container.container--about
+            .about
+              .about__left
+                .user
+                  .user__avatar
+                    .user__avatar-wrapper
+                      +image('content/avatar.jpg', 'user__avatar-img u-rounded-full')
+                  .user__about
+                    -
+                      var userinfo = [
+                        ['Проживаю:', 'Санкт-Петербург'],
+                        ['Возраст:', '47 лет'],
+                        ['Родился:', '9 июня 1973 года'],
+                      ];
+                    table.user__table
+                      each item in userinfo
+                        tr.user__table-item
+                          td.user__table-item-title #{item[0]}
+                          td.user__table-item-content #{item[1]}
+              .about__right
+                .about__main-text-content
+                  .about__desc Привет, меня зовут
+                  .about__title Виталий Шутов
+                  .about__text-info.u-font-semibold
+                    p
+                      | Я занимаюсь разработкой современных сайтов и приложений.<br>
+                      | Мне нравится делать интересные и современные проекты.
+                .about__ps
+                  | Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                  | Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
