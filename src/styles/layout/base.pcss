@@ -6,6 +6,7 @@ html {
     font-size: 14px;
   }
 }
+
 body,
 html {
   height: 100%;
@@ -20,35 +21,13 @@ body {
   color: $text-color;
 }
 
-.wrapper {
-  overflow: hidden;
-  min-height: 100%;
-  position: relative;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1480px;
-  width: 95%;
-  // width: 1490px;
-
-  @include phones {
-    width: 85%;
-  }
-}
-
-.fullscreen-section {
-  height: 100vh;
-  min-height: 650px;
+* {
+  box-sizing: border-box;
 }
 
 button {
   border: 0;
   cursor: pointer;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 ul {
@@ -86,4 +65,36 @@ img {
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+
+  @include phones {
+    max-width: $bp-phones;
+  }
+
+  @include tablets {
+    max-width: $bp-tablets;
+  }
+
+  @include desktop {
+    max-width: $bp-desktop;
+  }
+
+  @include desktopHd {
+    max-width: $bp-desktop-hd;
+  }
+}
+
+.fullscreen-section {
+  height: 100vh;
+  min-height: 650px;
 }

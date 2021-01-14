@@ -10,6 +10,23 @@ html(lang="en")
   body
     .wrapper
       .maincontent
-        +image('content/user.jpg', 'user-pic')
-        +icon('link', 'link-class')
-        .icon-bg
+        section.welcome.fullscreen-section
+          .container
+            header.header
+              .header__left
+                .span.logo-text ВШ
+              .header__center
+                .header__menu
+                  nav.menu
+                    ul.menu__list
+                      - var menuLinks = ["Обо мне", "Навыки", "Работы", "Отзывы"];
+                      each item in menuLinks
+                        li.menu__item
+                          a(href="#").menu__link #{item}
+              .header__right
+                ul.social-icons
+                  - var socials = ['insta', 'vk', 'github', 'envelope'];
+                  each item in socials
+                    li.social-icons__item
+                      a(href=`${item === 'envelope' ? 'mailto:vs@zorca.org' : '#'}`).social-icons__link
+                        +icon(item, 'social-icons__icon')
