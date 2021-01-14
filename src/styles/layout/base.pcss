@@ -106,7 +106,11 @@ img {
 }
 
 .main-content {
-  background: url('~images/bg/bg-welcome.jpg') center 30% / 105% no-repeat;
+  background: url('~images/bg/bg-welcome.jpg') center top / 100% no-repeat;
+
+  @include desktop {
+    background: url('~images/bg/bg-welcome.jpg') center 30% / 105% no-repeat;
+  }
 }
 
 .fullscreen-section {

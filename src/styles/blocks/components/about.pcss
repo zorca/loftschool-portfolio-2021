@@ -11,6 +11,10 @@
   margin-left: 14%;
 }
 
+.about__main-text-content {
+  padding: 0 0 70px 54px;
+}
+
 .about__desc {
   margin-bottom: 20px;
 }
@@ -20,4 +24,28 @@
   line-height: 49px;
   font-weight: 700;
   margin-bottom: 30px;
+}
+
+.user__table-item {
+  height: 40px;
+}
+
+.about__ps {
+  position: relative;
+  margin-left: 54px;
+
+  &::before {
+    position: absolute;
+    left: -54px;
+    content: '*';
+    font-style: italic;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 65px;
+    color: rgba(219, 2, 0, 0.5);
+  }
+}
+
+.about__ps-text {
+  padding-top: 16px;
 }
