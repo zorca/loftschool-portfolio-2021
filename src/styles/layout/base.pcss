@@ -66,6 +66,10 @@ img {
   max-height: 100%;
 }
 
+section {
+  background-color: #fff;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;
@@ -109,11 +113,17 @@ img {
   background: url('~images/bg/bg-welcome.jpg') center top / 100% no-repeat;
 
   @include desktop {
-    background: url('~images/bg/bg-welcome.jpg') center 30% / 105% no-repeat;
+    //background: url('~images/bg/bg-welcome.jpg') center 30% / 105% no-repeat;
   }
 }
 
 .fullscreen-section {
   height: 100vh;
   min-height: 650px;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 41px;
+  font-weight: 700;
 }
