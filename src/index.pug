@@ -142,29 +142,29 @@ html(lang="en")
           .container
             .reviews
               .reviews__header
-                .reviews__title.section-title Что обо мне говорят
+                .title Что обо мне говорят
                 .reviews__buttons
                   .reviews__btn.reviews__btn_prev
                   .reviews__btn.reviews__btn_next
               ul.reviews__content
                 - for (var i = 0; i < 2; i++)
-                li.reviews__content-item
-                  .quote
-                    .quote__text
-                      p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .quote__user
-                      .user-min
-                        .user-min__avatar
-                          .user-min__pic-wrapper
-                            +image('content/avatar.jpg', 'user-min__avatar-pic')
-                        .user-min__info
-                          .user-min__name Ковальчук Дмитрий
-                          .user-min__occ Основатель Loftschool
+                  li.reviews__content-item
+                    .quote
+                      .quote__text
+                        p Этот парень проходил обучение веб-разработке не где-то, а в Loftschool! 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                      .quote__user
+                        .user-min
+                          .user-min__avatar
+                            .user-min__pic-wrapper
+                              +image('content/reviews-1.jpg', 'reviews__avatar u-rounded-full')
+                          .user-min__info
+                            .user-min__name Ковальчук Дмитрий
+                            .user-min__occ Основатель Loftschool
         footer.footer
           .container.footer__container
             .footer__copyright
               .footer__copyright-col
-                .footer__copyright-year &copy; 2019
+                .footer__copyright-year &copy; 2021
               .footer__copyright-userinfo
                 .footer__copyright-name Виталий Шутов
                 .footer__data-text Личный сайт веб - разработчика
@@ -179,9 +179,9 @@ html(lang="en")
                   .footer__data-text
                     p Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool
                   .footer__data-socials
-                    ul.socials.socials--round-borders
+                    ul.social-icons
                       each item in socials
-                        li.social-icons__item
+                        li.social-icons__item.u-rounded-full
                           a(href=`${item.link}`).social-icons__link
                             +icon(item.icon, 'social-icons__icon')
                 .footer__data-col
